@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1.5,every node/.style={scale=1}]
+	\coordinate (P0) at (0,0);
+	\coordinate (P1) at (1,0);
+	\coordinate (P2) at (1,1);
+	\coordinate (P3) at (0,1);
+
+	\draw (P0) -- (P1) -- (P2) -- (P3) -- (P0);
+	\draw (P0) arc[start angle=\fpeval{315-atand(.25)},end angle=\fpeval{315+atand(.25)},radius=3];
+	\draw (P2) arc[start angle=\fpeval{135-atand(.25)},end angle=\fpeval{135+atand(.25)},radius=3];
+
+	\filldraw[fill=black] (P0) circle[radius=.05];
+	\filldraw[fill=black] (P1) circle[radius=.05];
+	\filldraw[fill=black] (P2) circle[radius=.05];
+	\filldraw[fill=black] (P3) circle[radius=.05];
+
+	\node[scale=.7,anchor=45] at (P0) {\texttt{4}};
+	\node[scale=.7,anchor=135] at (P1) {\texttt{3}};
+	\node[scale=.7,anchor=225] at (P2) {\texttt{2}};
+	\node[scale=.7,anchor=315] at (P3) {\texttt{1}};
+
+	\node[scale=.7,anchor=90] at ($(P0)!.5!(P1)$) {\textit{3}};
+	\node[scale=.7,anchor=180] at ($(P1)!.5!(P2)$) {\textit{2}};
+	\node[scale=.7,anchor=270] at ($(P2)!.5!(P3)$) {\textit{1}};
+	\node[scale=.7,anchor=0] at ($(P3)!.5!(P0)$) {\textit{4}};
+	\node[scale=.7,anchor=135] at ($(P0)!.5!(P2)!.1!90:(P0)$) {\textit{6}};
+	\node[scale=.7,anchor=315] at ($(P2)!.5!(P0)!.1!90:(P2)$) {\textit{5}};
+\end{tikzpicture}

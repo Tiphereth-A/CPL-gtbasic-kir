@@ -1,0 +1,34 @@
+\begin{frame}[fragile]{Laplace 矩阵 / Kirchhoff 矩阵}
+	\begin{definition}[Laplace 矩阵 (无向图)]
+		对无向图 \(G\), 称
+		\[
+			L(G):=D(G)-A(G)
+		\]
+		为图 \(G\) 的 Laplace 矩阵
+	\end{definition}
+
+	\begin{definition}[Laplace 矩阵 (有向图)]
+		对有向图 \(G\), 称
+		\begin{itemize}
+			\item \[
+				      L_{\text{out}}(G):=D_{\text{out}}(G)-A(G)
+			      \]
+			      为图 \(G\) 的出度 Laplace 矩阵
+			\item \[
+				      L_{\text{in}}(G):=D_{\text{in}}(G)-A(G)
+			      \]
+			      为图 \(G\) 的入度 Laplace 矩阵
+		\end{itemize}
+	\end{definition}
+\end{frame}
+
+
+\begin{frame}[fragile]{性质}
+	\begin{itemize}
+		\item Laplace 矩阵是半正定的
+		\item Laplace 矩阵的最小特征值为 0
+		\item Laplace 矩阵的每一行 (列) 的元素之和为 0
+		\item Laplace 矩阵的特征值中 0 的重数为该图的连通分支个数
+		\item Laplace 矩阵的第二小的特征值 (重特征值要重复计算) 为该图的\textbf{代数连通度}
+	\end{itemize}
+\end{frame}

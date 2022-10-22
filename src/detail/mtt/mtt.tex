@@ -1,0 +1,55 @@
+\begin{frame}[fragile]{Kirchhoff 矩阵树定理}
+	\only<1->{Kirchhoff 矩阵树定理解决了图的生成树个数计数问题
+
+		令 \(A[i]\) 为方阵 \(A\) 去掉第 \(i\) 行和第 \(i\) 列后得到的方阵, 则}
+
+	\begin{theorem}[Kirchhoff 矩阵树定理 (无向图)]
+		\only<1->{对无向图 \(G\), 其生成树个数 \(t(G)\) 满足
+			\[
+				t(G)=\det(L(G)[i])
+			\]}
+
+		\only<2->{另外, 设 \(L(G)\) 的 \(|V|\) 个特征值 \(0=\lambda_1\leq \lambda_2\leq\dots\leq\lambda_{|V|}\), 则
+
+			\[
+				t(G)=\frac{1}{n}\prod_{i=2}^{|V|}\lambda_i
+			\]}
+	\end{theorem}
+
+	\only<3->{Cayley 公式: \(t(K_n)=n^{n-2}\)}
+\end{frame}
+
+
+\begin{frame}[fragile]{Kirchhoff 矩阵树定理}
+	类似地,
+
+	\begin{definition}[根向树形图]
+		根向树形图指的是基图是树, 且所有弧均为子结点指向父结点的有向图
+
+		对有向图 \(G\), 记以 \(r\) 为根的根向树形支撑子图个数为\(t_{\text{root}}(G,r)\)
+	\end{definition}
+
+	\begin{definition}[叶向树形图]
+		叶向树形图指的是基图是树, 且所有弧均为父结点指向子结点的有向图
+
+		对有向图 \(G\), 记以 \(r\) 为根的叶向树形支撑子图个数为\(t_{\text{leaf}}(G,r)\)
+	\end{definition}
+\end{frame}
+
+
+\begin{frame}[fragile]{Kirchhoff 矩阵树定理}
+	类似地,
+
+	\begin{theorem}[Kirchhoff 矩阵树定理 (有向图)]
+		对有向图 \(G\),
+		\begin{itemize}
+			\item \[
+				      t_{\text{root}}(G,i)=\det(L_{\text{out}}(G)[i])
+			      \]
+			\item \[
+				      t_{\text{leaf}}(G,i)=\det(L_{\text{in}}(G)[i])
+			      \]
+		\end{itemize}
+
+	\end{theorem}
+\end{frame}

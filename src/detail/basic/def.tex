@@ -1,0 +1,31 @@
+\begin{frame}{基础定义}
+	\only<1-5>{图是一个二元组 \(G=(V(G), E(G))\)}
+
+	\only<2-5>{其中}
+	\begin{itemize}
+		\item<2-5> \(V(G)\) 是非空集, 称为\textbf{点集}, 对于 \(V\) 中的每个元素, 我们称其为\textbf{顶点}, 简称\textbf{点}
+		\item<3-5> \(E(G)\) 为 \(V(G)\) 各结点之间边的集合, 称为\textbf{边集}
+	\end{itemize}
+
+	\only<4-5>{当 \(V,E\) 都是有限集合时, 称 \(G\) 为\textbf{有限图}}
+
+	\only<5>{当 \(V\) 或 \(E\) 是无限集合时, 称 \(G\) 为\textbf{无限图}}
+
+	\only<6-12>{图有多种, 包括\textbf{无向图},\textbf{有向图},\textbf{混合图}等}
+
+	\only<7-12>{\begin{itemize}
+			\item<7-> 若 \(G\) 为无向图, 则 \(E\) 中的每个元素为一个无序二元组 \((u, v)\), 称作\textbf{无向边}, 简称\textbf{边}, 其中 \(u, v \in V\)
+
+				\only<8->{设 \(e = (u, v)\), 则 \(u\) 和 \(v\) 称为 \(e\) 的\textbf{端点}}
+			\item<9-> 若 \(G\) 为有向图, 则 \(E\) 中的每一个元素为一个有序二元组 \((u, v)\), 有时也写作 \(u \to v\), 称作\textbf{有向边}或\textbf{弧}, 在不引起混淆的情况下也可以称作\textbf{边}
+
+				\only<10->{设 \(e = u \to v\), 则此时 \(u\) 称为 \(e\) 的\textbf{起点}, \(v\) 称为 \(e\) 的\textbf{终点}, 起点和终点也称为 \(e\) 的\textbf{端点}}
+
+				\only<11->{称将有向图的所有弧的方向去掉后得到的无向图为该有向图的\textbf{基图}}
+			\item<12-> 若 \(G\) 为混合图, 则 \(E\) 中既有向边, 又有无向边
+		\end{itemize}}
+
+	\only<13->{若 \(G\) 的每条边 \(e_k=(u_k,v_k)\) 都被赋予一个数作为该边的\textbf{权}, 则称 \(G\) 为\textbf{赋权图}. 如果这些权都是正实数, 就称 \(G\) 为\textbf{正权图}}
+
+	\only<14->{图 \(G\) 的点数 \(\left| V(G) \right|\) 也被称作图 \(G\) 的\textbf{阶}}
+\end{frame}

@@ -1,0 +1,120 @@
+\begin{frame}{度矩阵, 邻接矩阵, 关联矩阵}
+	\begin{alertblock}{注意}
+		以下提到的图可以有重边, 但均不能有自环
+	\end{alertblock}
+\end{frame}
+
+
+\begin{frame}[fragile]{度矩阵, 邻接矩阵, 关联矩阵}
+	\begin{definition}
+		\only<1->{对无向图 \(G=(V,E)\), 令 \(|V(G)|=n\), \(|E(G)|=m\)}
+
+		\only<2->{\begin{itemize}
+				\item<2-> 图\(G\) 的\textbf{度矩阵}\xspace \(D(G):=\operatorname{diag}\{d(i):i\in V(G)\}\)
+				\item<3-> 图\(G\) 的\textbf{邻接矩阵}\xspace 定义为 \(n\) 阶方阵 \(A(G)\), 其中
+
+					\begin{itemize}
+						\item<4-> 边不带权时, \(A_{ij}(G)\) 一般表示点 \(i\) 和点 \(j\) 之间相连的边数
+
+							若点 \(i\) 和点 \(j\) 不相邻则 \(A_{ij}(G)=0\)
+						\item<5-> 边带权时, \(A_{ij}(G)\) 一般表示点 \(i\) 和点 \(j\) 之间相连的边的边权和
+
+							若点 \(i\) 和点 \(j\) 不相邻则 \(A_{ij}(G)=\infty\)
+					\end{itemize}
+				\item<6-> 图\(G\) 的\textbf{关联矩阵}\xspace 定义为 \(n\times m\) 阶矩阵 \(M(G)\), 其中
+
+					\begin{itemize}
+						\item 若 \(M_{ij}(G)=1\), 则表示第 \(i\) 个点和第 \(j\) 条边相关联
+						\item 若 \(M_{ij}(G)=0\), 则表示第 \(i\) 个点和第 \(j\) 条边不关联
+					\end{itemize}
+			\end{itemize}}
+	\end{definition}
+\end{frame}
+
+
+\begin{frame}{度矩阵, 邻接矩阵, 关联矩阵}
+	\includetikzimage{adjmat1.tex}{示例1}
+
+	\[\begin{array}{cc}
+			A=\begin{pmatrix}
+				  0 & 1 & 0 & 1 \\
+				  1 & 0 & 1 & 2 \\
+				  0 & 1 & 0 & 1 \\
+				  1 & 2 & 1 & 0
+			  \end{pmatrix} &
+			M=\begin{pmatrix}
+				  1 & 0 & 0 & 1 & 0 & 0 \\
+				  1 & 1 & 0 & 0 & 1 & 1 \\
+				  0 & 1 & 1 & 0 & 0 & 0 \\
+				  0 & 0 & 1 & 1 & 1 & 1
+			  \end{pmatrix}
+		\end{array}\]
+\end{frame}
+
+
+\begin{frame}{度矩阵, 邻接矩阵, 关联矩阵}
+	\begin{definition}
+		\only<1->{对有向图 \(G=(V,E)\), 令 \(|V(G)|=n\), \(|E(G)|=m\)}
+
+		\only<2->{\begin{itemize}
+				\item<2-> 图\(G\) 的\textbf{入度矩阵}\xspace \(D_{\text{in}}(G):=\operatorname{diag}\{d_{\text{in}}(i):i\in V(G)\}\),\textbf{出度矩阵}\xspace \(D_{\text{out}}(G):=\operatorname{diag}\{d_{\text{out}}(i):i\in V(G)\}\)
+				\item<3-> 图\(G\) 的\textbf{邻接矩阵}\xspace 定义为 \(n\) 阶方阵 \(A(G)\), 其中
+
+					\begin{itemize}
+						\item<4-> 边不带权时, \(A_{ij}(G)\) 一般表示点 \(i\)\textbf{到}点 \(j\) 之间相连的边数
+
+							若点 \(i\) 和点 \(j\) 之间没有边, 则 \(A_{ij}(G)=0\)
+						\item<5-> 边带权时, \(A_{ij}(G)\) 一般表示点 \(i\)\textbf{到}点 \(j\) 之间相连的边的边权和
+
+							若点 \(i\) 和点 \(j\) 之间没有边, 则 \(A_{ij}(G)=\infty\)
+					\end{itemize}
+				\item<6-> 图\(G\) 的\textbf{关联矩阵}\xspace 定义为 \(n\times m\) 阶矩阵 \(M(G)\), 其中
+
+					\begin{itemize}
+						\item 若 \(M_{ij}(G)=1\), 则表示第 \(i\) 个点是第 \(j\) 条边的终点
+						\item 若 \(M_{ij}(G)=-1\), 则表示第 \(i\) 个点是第 \(j\) 条边的起点
+						\item 若 \(M_{ij}(G)=0\), 则表示第 \(i\) 个点不是第 \(j\) 条边的端点
+					\end{itemize}
+			\end{itemize}}
+	\end{definition}
+\end{frame}
+
+
+\begin{frame}{度矩阵, 邻接矩阵, 关联矩阵}
+	\includetikzimage{adjmat2.tex}{示例2}
+
+	\[\begin{array}{cc}
+			A(G)=\begin{pmatrix}
+				     0 & 0 & 0 & 1 \\
+				     1 & 0 & 1 & 1 \\
+				     0 & 0 & 0 & 0 \\
+				     0 & 1 & 1 & 0
+			     \end{pmatrix} &
+			M(G)=\begin{pmatrix}
+				     1  & 0  & 0  & -1 & 0  & 0  \\
+				     -1 & -1 & 0  & 0  & -1 & 1  \\
+				     0  & 1  & 1  & 0  & 0  & 0  \\
+				     0  & 0  & -1 & 1  & 1  & -1
+			     \end{pmatrix}
+		\end{array}\]
+\end{frame}
+
+
+\begin{frame}[fragile]{度矩阵, 邻接矩阵, 关联矩阵}
+	我们有一个简单的定理:
+
+	\begin{theorem}
+		\begin{itemize}
+			\item 对无向图 \(G\),
+			      \[
+				      M(G)M^T(G)=D(G)+A(G)
+			      \]
+			\item 对有向图 \(G\),
+			      \[
+				      M(G)M^T(G)=D_{\text{in}}(G)+D_{\text{out}}(G)-A(G)
+			      \]
+		\end{itemize}
+	\end{theorem}
+
+	结合这三种矩阵的定义不难证明
+\end{frame}

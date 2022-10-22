@@ -1,8 +1,8 @@
-# LectureTemplate
+# CPL-gtbasic-kir
 
-![GitHub](https://img.shields.io/github/license/Tiphereth-A/LectureTemplate)
+![GitHub](https://img.shields.io/github/license/Tiphereth-A/CPL-gtbasic-kir)
 
-My template of LaTeX lecture & slice, powered by [metropolis](https://github.com/matze/mtheme)
+My LaTeX lecture & slice about basic concept of graph theory & Kirchhoff matrix tree theorem, powered by [metropolis](https://github.com/matze/mtheme)
 
 ## Usage
 

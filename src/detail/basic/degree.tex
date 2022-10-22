@@ -1,0 +1,56 @@
+\begin{frame}[fragile]{度数}
+	\only<1->{与一个顶点 \(v\) 关联的边的条数称作该顶点的\textbf{度}, 记作 \(d(v)\)}
+
+	\only<2->{特别地, 对于边 \((v, v)\), 则每条这样的边要对 \(d(v)\) 产生 \(2\) 的贡献}
+
+	\only<3->{对于无向简单图, 有 \(d(v) = \left| N(v) \right|\)}
+\end{frame}
+
+
+\begin{frame}[fragile]{握手定理}
+	\begin{theorem}[握手定理]
+		对于任意无向图 \(G = (V, E)\), 有 \(\sum_{v \in V} d(v) = 2 \left| E \right|\)
+	\end{theorem}
+
+	\begin{lemma}
+		在任意图中, 度数为奇数的点必然有偶数个
+	\end{lemma}
+\end{frame}
+
+
+\begin{frame}[fragile]{度数相关概念}
+	\begin{itemize}
+		\item<1-> 若 \(d(v) = 0\), 则称 \(v\) 为\textbf{孤立点}
+		\item<2-> 若 \(d(v) = 1\), 则称 \(v\) 为\textbf{叶结点}/\textbf{悬挂点}
+		\item<3-> 若 \(2 \mid d(v)\), 则称 \(v\) 为\textbf{偶点}
+		\item<4-> 若 \(2 \nmid d(v)\), 则称 \(v\) 为\textbf{奇点}
+		\item<5-> 若 \(d(v) = \left| V \right| - 1\), 则称 \(v\) 为\textbf{支配点}
+		\item<6-> 对一张图, 所有结点的度数的最小值称为 \(G\) 的\textbf{最小度}, 记作 \(\delta (G)\)
+
+			最大值称为\textbf{最大度}, 记作 \(\Delta (G)\)
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{度数相关概念}
+	\begin{itemize}
+		\item<1-> 在有向图 \(G = (V, E)\) 中, 以一个顶点 \(v\) 为起点的边的条数称为该顶点的\textbf{出度}, 记作 \(d_{\text{out}}(v)\)
+
+			\only<2->{以一个顶点 \(v\) 为终点的边的条数称为该结点的\textbf{入度}, 记作 \(d_{\text{in}}(v)\)}
+
+			\only<3->{\[
+				d_{\text{out}}(v)+d_{\text{in}}(v)=d(v)
+			\]}
+
+			\only<4->{对于任意有向图 \(G = (V, E)\), 有:
+
+				\[
+					\sum_{v \in V} d_{\text{out}}(v) = \sum_{v \in V} d_{\text{in}}(v) = \left| E \right|
+				\]}
+
+			\only<5->{\[
+					\sum_{v \in V} d_{\text{out}}^2(v) = \sum_{v \in V} d_{\text{in}}^2(v)
+				\]}
+		\item<6-> 若对一张无向图 \(G = (V, E)\), 每个顶点的度数都是一个固定的常数 \(k\), 则称 \(G\) 为 \textbf{\(k\)- 正则图}
+	\end{itemize}
+\end{frame}

@@ -1,0 +1,13 @@
+\begin{frame}[fragile]{简单图}
+	\begin{itemize}
+		\item<1->\textbf{自环}: 对 \(E\) 中的边 \(e = (u, v)\), 若 \(u = v\), 则 \(e\) 被称作一个自环
+		\item<2->\textbf{重边}: 若 \(E\) 中存在两个完全相同的元素 (边) \(e_1, e_2\), 则它们被称作 (一组) 重边
+		\item<3->\textbf{简单图}: 若一个图中没有自环和重边, 它被称为简单图
+
+		\only<4->{具有至少两个顶点的简单无向图中一定存在度相同的结点}
+	\end{itemize}
+
+	\only<5->{\begin{alertblock}{注意}
+			在无向图中 \((u, v)\) 和 \((v, u)\) 算一组重边, 而在有向图中, \(u \to v\) 和 \(v \to u\) 不为重边
+		\end{alertblock}}
+\end{frame}

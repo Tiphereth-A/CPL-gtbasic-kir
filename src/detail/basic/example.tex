@@ -1,0 +1,24 @@
+\begin{frame}{一些特殊的图}
+	\begin{itemize}
+		\item<1-> 若无向简单图 \(G\) 满足任意不同两点间均有边, 则称 \(G\) 为\textbf{完全图}, \(n\) 阶完全图记作 \(K_n\). 若有向图 \(G\) 满足任意不同两点间都有两条方向不同的边, 则称 \(G\) 为\textbf{有向完全图}
+		\item<2-> 边集为空的图称为\textbf{无边图 (edgeless graph)},\textbf{空图 (empty graph)}或\textbf{零图 (null graph)}, \(n\) 阶无边图记作 \(\overline{K}_n\) 或 \(N_n\)
+
+			\only<3->{\(N_n\) 与 \(K_n\) 互为补图}
+		\item<4-> 若无向简单图 \(G = \left( V, E \right)\) 的所有边恰好构成一个圈, 则称 \(G\) 为\textbf{环图/圈图}, \(n\)(\(n \geq 3\)) 阶圈图记作 \(C_n\)
+
+			\only<5->{易知, 一张图为圈图的充分必要条件是, 它是 \(2\)- 正则连通图}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{一些特殊的图}
+	\begin{itemize}
+		\item<1-> 若无向简单图 \(G = \left( V, E \right)\) 满足, 存在一个点 \(v\) 为支配点, 其余点之间没有边相连, 则称 \(G\) 为\textbf{星图/菊花图}, \(n + 1\)(\(n \geq 1\)) 阶星图记作 \(S_n\)
+		\item<2-> 若无向简单图 \(G = \left( V, E \right)\) 满足, 存在一个点 \(v\) 为支配点, 其它点之间构成一个圈, 则称 \(G\) 为\textbf{轮图}, \(n + 1\) (\(n \geq 3\)) 阶轮图记作 \(W_n\)
+		\item<3-> 若无向简单图 \(G = \left( V, E \right)\) 的所有边恰好构成一条简单路径, 则称 \(G\) 为\textbf{链}, \(n\) 阶的链记作 \(P_n\)
+		\item<4-> 如果一张无向连通图不含环, 则称它是一棵\textbf{树}
+		\item<5-> 如果一张图的点集可以被分为两部分, 每一部分的内部都没有连边, 那么这张图是一张\textbf{二分图}
+
+			\only<6->{如果二分图中任意两个不在同一部分的点之间都有连边, 那么这张图是一张\textbf{完全二分图}, 一张两部分分别有 \(n\) 个点和 \(m\) 个点的完全二分图记作 \(K_{n, m}\)}
+	\end{itemize}
+\end{frame}

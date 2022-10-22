@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=1.25,every node/.style={scale=1}]
+	\coordinate (O) at (0,0);
+
+	\draw[thick,draw=brown] (O) circle[radius=1];
+
+	\foreach \x in {0,45,...,315}{
+			\draw[thick,draw=brown] (O) edge (\x:1);
+			\filldraw[thin,draw=brown,fill=blue]
+			(\x:1) circle [radius=.1];
+		}
+
+	\filldraw[thin,draw=brown,fill=red] (O) circle[radius=.1];
+\end{tikzpicture}

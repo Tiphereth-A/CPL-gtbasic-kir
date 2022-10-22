@@ -1,0 +1,45 @@
+\newcommand{\drawstvirus}[8]{
+	\begin{scope}
+		\pgftransformxshift{#1cm}
+		\pgftransformyshift{-#2cm}
+
+
+		\coordinate (O) at (0,0);
+		\coordinate (P0) at (90:1);
+		\coordinate (P1) at (210:1);
+		\coordinate (P2) at (330:1);
+
+
+		\notblank{#3}{
+			\draw[thick,draw=brown] (O) -- (P0);
+		}{}
+		\notblank{#4}{
+			\draw[thick,draw=brown] (O) -- (P1);
+		}{}
+		\notblank{#5}{
+			\draw[thick,draw=brown] (O) -- (P2);
+		}{}
+		\notblank{#6}{
+			\draw[thick,draw=brown] (P0) arc[start angle=90,end angle=210,radius=1];
+		}{}
+		\notblank{#7}{
+			\draw[thick,draw=brown] (P1) arc[start angle=210,end angle=330,radius=1];
+		}{}
+		\notblank{#8}{
+			\draw[thick,draw=brown] (P2) arc[start angle=330,end angle=450,radius=1];
+		}{}
+
+
+		\filldraw[thin,draw=brown,fill=red] (O) circle[radius=.1];
+		\filldraw[thin,draw=brown,fill=blue] (P0) circle[radius=.1];
+		\filldraw[thin,draw=brown,fill=blue] (P1) circle[radius=.1];
+		\filldraw[thin,draw=brown,fill=blue] (P2) circle[radius=.1];
+	\end{scope}
+}
+
+\begin{tikzpicture}[scale=.5,every node/.style={scale=.5}]
+	\begin{tabular}{cccccccc}
+		\drawstvirus{0}{0}{1}{1}{1}{}{}{}   & \drawstvirus{2.5}{0}{}{1}{1}{1}{}{}   & \drawstvirus{5}{0}{}{1}{1}{}{}{1}   & \drawstvirus{7.5}{0}{1}{1}{}{}{}{1}   & \drawstvirus{10}{0}{1}{1}{}{}{1}{}   & \drawstvirus{12.5}{0}{1}{}{1}{1}{}{}   & \drawstvirus{15}{0}{1}{}{1}{}{1}{}   & \drawstvirus{17.5}{0}{1}{}{}{1}{1}{}   \\
+		\drawstvirus{0}{2.5}{1}{}{}{}{1}{1} & \drawstvirus{2.5}{2.5}{1}{}{}{1}{}{1} & \drawstvirus{5}{2.5}{}{1}{}{1}{}{1} & \drawstvirus{7.5}{2.5}{}{1}{}{}{1}{1} & \drawstvirus{10}{2.5}{}{1}{}{1}{1}{} & \drawstvirus{12.5}{2.5}{}{}{1}{1}{}{1} & \drawstvirus{15}{2.5}{}{}{1}{1}{1}{} & \drawstvirus{17.5}{2.5}{}{}{1}{}{1}{1}
+	\end{tabular}
+\end{tikzpicture}

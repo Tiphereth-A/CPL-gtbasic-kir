@@ -1,0 +1,12 @@
+\begin{frame}{子图}
+	\begin{itemize}
+		\item<1-> 对一张图 \(G = (V, E)\), 若存在另一张图 \(H = (V', E')\) 满足 \(V' \subseteq V\) 且 \(E' \subseteq E\), 则称 \(H\) 是 \(G\) 的\textbf{子图}, 记作 \(H \subseteq G\)
+		\item<2-> 若对 \(H \subseteq G\), 满足 \(\forall u, v \in V'\), 只要 \((u, v) \in E\), 均有 \((u, v) \in E'\), 则称 \(H\) 是 \(G\) 的\textbf{导出子图/诱导子图}
+
+			\only<3->{容易发现, 一个图的导出子图仅由子图的点集决定, 因此点集为 \(V'\)(\(V' \subseteq V\)) 的导出子图称为 \(V'\) 导出的子图, 记作 \(G \left[ V' \right]\)}
+		\item<4-> 若 \(H \subseteq G\) 满足 \(V' = V\), 则称 \(H\) 为 \(G\) 的\textbf{生成子图/支撑子图}
+
+			\only<5->{显然, \(G\) 是自身的子图, 支撑子图, 导出子图; 无边图是 \(G\) 的支撑子图. 原图 \(G\) 和无边图都是 \(G\) 的平凡子图}
+		\item<6-> 如果有向图 \(G = (V, E)\) 的导出子图 \(H = G \left[V^\ast \right]\) 满足 \(\forall v \in V^\ast, (v, u) \in E\), 有 \(u \in V^\ast\), 则称 \(H\) 为 \(G\) 的一个\textbf{闭合子图}
+	\end{itemize}
+\end{frame}
